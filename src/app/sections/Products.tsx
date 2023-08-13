@@ -56,7 +56,7 @@ const Products = () => {
               dir="col"
               key={i}
               title={el.title}
-              src={`/m${i + 1}.svg`}
+              src={`/assessment/m${i + 1}.svg`}
               body={el.desc}
             />
           ))}
@@ -78,7 +78,7 @@ const Products = () => {
           <div className="flex w-full flex-col gap-y-8">
             {datArr.slice(6).map((el, i) => (
               <Card
-                src=""
+                src={`/assessment/m${6 + (i + 1)}.svg`}
                 invert={false}
                 title={el.title}
                 dir="row"
@@ -92,7 +92,7 @@ const Products = () => {
               alt="product_img"
               className="object-cover"
               width={"70%"}
-              src={isMobile ? "p1.png" : "/p2.png"}
+              src={isMobile ? "/assessment/p1.png" : "/assessment/p2.png"}
             />
           </div>
         </div>
@@ -103,13 +103,13 @@ const Products = () => {
             width={"70%"}
             alt="product_img"
             className="object-cover"
-            src="/p1.png"
+            src="/assessment/p1.png"
           />
         </div>
         <div className="flex flex-col gap-y-8 ">
           {datArr.slice(6).map((el, i) => (
             <Card
-              src={`m${6 + (i + 1)}.svg`}
+              src={`/assessment/m${6 + (i + 1)}.svg`}
               invert={true}
               title={el.title}
               dir="row"

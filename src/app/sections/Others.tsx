@@ -8,19 +8,29 @@ import useIsMobile from "../hooks/useIsMobile";
 import getPersonImage from "../util/getPersonImage";
 const title = "Organize your digital assets with a new methodology here.";
 const posts = [
-  { title, name: "Andrew Miller", position: "CEO" },
-  { title, name: "David Munsan", position: "UX" },
-  { title, name: "Andrew Meller", position: "UI" },
+  {
+    title,
+    name: "Andrew Miller",
+    position: "CEO",
+    desc: "Podcasting operational management inside of workflows to establish a framework seamless.Convergence collaboratively.",
+  },
+  {
+    title,
+    name: "David Munsan",
+    position: "UX",
+    desc: "Keeping your eye while performing a deep dive on the start-up mentality to derive convergence collaboratively.",
+  },
+  {
+    title,
+    name: "Andrew Meller",
+    position: "UI",
+    desc: "Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C .",
+  },
 ];
 const Others = () => {
   const isMobile = useIsMobile();
   return (
-    <section
-      className="px-4 md:px-16 min-h-screen
-      flex flex-col gap-y-8 
-      py-8
-      "
-    >
+    <section className="px-4 md:px-16 min-h-screen flex flex-col gap-y-8 py-8">
       {isMobile && (
         <SectionHeading
           title="What Our Customers Say"
@@ -32,9 +42,9 @@ const Others = () => {
           <Logo fill="black" />
         </div>
         <div className="md:text-center text-lg md:text-2xl w-full md:w-3/4 font-bold md:font-medium">
-          Thank you for making it painless, pleasant and most of all hassle
+          {`Thank you for making it painless, pleasant and most of all hassle
           free! I love LookScout. I can't say enough about LookScout. Great job,
-          I will definitely be ordering again!
+          I will definitely be ordering again!`}
         </div>
         <Avatar name="Lisa Smith" desc="CEO" />
       </div>
@@ -45,8 +55,7 @@ const Others = () => {
       <div className="grid grid-cols-1 md:grid-cols-3  gap-12 md:gap-4">
         {posts.map((el, i) => (
           <ImageCard {...el} className="" src={getPersonImage()} key={i}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat,
-            unbus, aliquam odit voluptate consectetur saepe magnam animi.
+            {el.desc}
           </ImageCard>
         ))}
       </div>

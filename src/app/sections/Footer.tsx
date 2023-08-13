@@ -29,16 +29,20 @@ const Footer = () => {
         <div className="flex flex-col gap-y-4 md:gap-y-8  w-full">
           <div className="text-white">Resources</div>
           <div className="flex flex-col gap-y-4">
-            {menu.slice(0, 4).map((el) => (
-              <a href={`/${el}`}>{el}</a>
+            {menu.slice(0, 4).map((el, i) => (
+              <a key={i} href={`/${el}`}>
+                {el}
+              </a>
             ))}
           </div>
         </div>
         <div className="flex flex-col gap-y-8 w-full">
           <div className="text-white">Products</div>
           <div className="flex flex-col gap-y-4">
-            {menu.slice(4).map((el) => (
-              <a href={el}>{el}</a>
+            {menu.slice(4).map((el, i) => (
+              <a href={el} key={i}>
+                {el}
+              </a>
             ))}
           </div>
         </div>
@@ -64,8 +68,8 @@ const Footer = () => {
       <div className="flex flex-col gap-y-4 md:flex-row md:justify-between tet">
         <div className="text-md">© 2023 Lookscout. All Rights Reserved.</div>
         <div className="flex px-4 justify-between items-center md:justify-normal md:gap-x-4 text-2xl text-white">
-          {logos.map((Icon) => (
-            <div>
+          {logos.map((Icon, i) => (
+            <div key={i}>
               <Icon />
             </div>
           ))}

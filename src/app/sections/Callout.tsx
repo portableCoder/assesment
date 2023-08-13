@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "../components/SectionHeading";
 import Button from "../components/Button";
-import { BsCheck } from "react-icons/bs";
+import { BsCheck, BsCheckLg } from "react-icons/bs";
 const logos = ["verge", "slack", "google", "paypal", "mailchimp"];
 const Callout = () => {
   return (
@@ -13,9 +13,9 @@ const Callout = () => {
             subtitle="Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service."
           />
           <div className="flex md:px-16 my-12 md:flex-row flex-col gap-y-8 items-center justify-between flex-wrap w-full ">
-            {logos.map((el) => (
-              <div>
-                <img src={`/${el}.svg`} />
+            {logos.map((el, i) => (
+              <div key={i}>
+                <img src={`/assessment/${el}.svg`} />
               </div>
             ))}
           </div>
@@ -42,10 +42,10 @@ const Callout = () => {
               </Button>
             </div>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 font-semibold text-sm px-8">
-              {["Fully secure", "24/7 Support", "Done Deal"].map((el) => (
-                <div className="flex items-center gap-x-3">
-                  <div className="w-6 h-6 justify-center  text-white rounded-full flex items-center bg-primary-btn">
-                    <BsCheck />
+              {["Fully secure", "24/7 Support", "Done Deal"].map((el, i) => (
+                <div className="flex items-center gap-x-3" key={i}>
+                  <div className="w-6 h-6 justify-center text-lg  text-white rounded-full flex items-center bg-primary-btn">
+                    <BsCheckLg />
                   </div>
                   <div>{el}</div>
                 </div>

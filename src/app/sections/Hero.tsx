@@ -33,7 +33,7 @@ const Hero = () => {
                   className="flex items-center justify-center md:items-start md:justify-normal"
                   key={i}
                 >
-                  <img src={`/${icon}.svg`} />
+                  <img src={`/assessment/${icon}.svg`} />
                 </div>
               ))}
             </div>
@@ -48,7 +48,7 @@ const Hero = () => {
         >
           <div className="z-50 w-full h-full ">
             <img
-              src="/p3.png"
+              src="/assessment/p3.png"
               className="object-contain transform scale-90 md:scale-125 w-full h-full"
             ></img>
           </div>
