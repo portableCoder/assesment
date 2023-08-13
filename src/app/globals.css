@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
   overflow-x: hidden;
   background-color: white;
+  @apply text-col;
 }

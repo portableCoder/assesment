@@ -5,7 +5,7 @@ function useIsMobile() {
 
   useEffect(() => {
     function handleResize() {
-      setIsMobile(window.innerWidth <= 768); // You can adjust the breakpoint as needed
+      setIsMobile(window.innerWidth < 720); // You can adjust the breakpoint as needed
     }
 
     // Initial check

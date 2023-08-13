@@ -9,10 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "col": "#272D37",
         "primary": "#2B63D9",
+        "primary-btn": "#437EF7",
         "secondary": "#3971E7",
         "primary-2": "#648EF7",
-        "alt": "#151B28"
+        "alt": "#151B28",
+        "alt2": "#FAFBFC"
       }
     },
   },
